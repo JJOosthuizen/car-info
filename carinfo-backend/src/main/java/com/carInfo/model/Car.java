@@ -15,7 +15,7 @@ public class Car {
     private String name;
     private String model;
     private String make;
-    private int year;
+    private int caryear;
 
     public Car() {
         // Default constructor required by JPA
@@ -25,7 +25,7 @@ public class Car {
         this.name = name;
         this.model = model;
         this.make = make;
-        this.year = year;
+        this.caryear = year;
     }
 
     // Getters and Setters
@@ -62,12 +62,12 @@ public class Car {
         this.make = make;
     }
 
-    public int getYear() {
-        return year;
+    public int getCarYear() {
+        return caryear;
     }
 
-    public void setYear(int year) {
-        this.year = year;
+    public void setCarYear(int year) {
+        this.caryear = year;
     }
 
     @Override
@@ -77,7 +77,7 @@ public class Car {
                 ", name='" + name + '\'' +
                 ", model='" + model + '\'' +
                 ", make='" + make + '\'' +
-                ", year=" + year +
+                ", year=" + caryear +
                 '}';
     }
 }
