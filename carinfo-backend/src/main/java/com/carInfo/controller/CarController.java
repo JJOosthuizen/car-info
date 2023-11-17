@@ -1,22 +1,29 @@
 package com.carInfo.controller;
 
+import com.carInfo.dao.CarRepository;
 import com.carInfo.model.Car;
-import com.carInfo.service.CarServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
-@RequestMapping("/car")
 public class CarController {
     @Autowired
-    private CarServiceInterface carServiceInterface;
+    private CarRepository carRepository;
 
-    @PostMapping("/add")
-    public String add(@RequestBody Car car){
-        carServiceInterface.saveCar(car);
+    @PostMapping("/saveCar")
+    public String saveCar(@RequestBody Car car){
+        carRepository.save(car);
         return "New car has been added";
+    }
+    @GetMapping("/getAllCars")
+    public List<Car> getAll(){
+        return carRepository.findAll();
+    }
+
+    @GetMapping("/getCar/{name}")
+    public List<Car> getCarByName(@PathVariable String name){
+        return carRepository.findByName(name);
     }
 }

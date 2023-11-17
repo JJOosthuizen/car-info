@@ -1,5 +1,6 @@
 package com.carInfo.model;
 
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,12 +11,12 @@ public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     private String name;
     private String model;
     private String make;
-    private int caryear;
+    private int carYear;
 
     public Car() {
         // Default constructor required by JPA
@@ -25,16 +26,16 @@ public class Car {
         this.name = name;
         this.model = model;
         this.make = make;
-        this.caryear = year;
+        this.carYear = year;
     }
 
     // Getters and Setters
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -63,11 +64,11 @@ public class Car {
     }
 
     public int getCarYear() {
-        return caryear;
+        return carYear;
     }
 
     public void setCarYear(int year) {
-        this.caryear = year;
+        this.carYear = year;
     }
 
     @Override
@@ -77,7 +78,7 @@ public class Car {
                 ", name='" + name + '\'' +
                 ", model='" + model + '\'' +
                 ", make='" + make + '\'' +
-                ", year=" + caryear +
+                ", year=" + carYear +
                 '}';
     }
 }
