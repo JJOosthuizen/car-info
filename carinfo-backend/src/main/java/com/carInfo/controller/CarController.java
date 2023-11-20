@@ -26,4 +26,14 @@ public class CarController {
     public List<Car> getCarByName(@PathVariable String name){
         return carRepository.findByName(name);
     }
+
+    @GetMapping("/getModel/{model}")
+    public List<Car> getCarsByModel(@PathVariable String model){
+        return carRepository.findByModel(model);
+    }
+
+    @GetMapping("/getMake/{make}")
+    public List<Car> getCarsByMake(@PathVariable String make){
+        return carRepository.findByMake(make);
+    }
 }

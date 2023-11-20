@@ -19,7 +19,7 @@ public class Car {
     private int carYear;
 
     public Car() {
-        // Default constructor required by JPA
+
     }
 
     public Car(String name, String model, String make, int year) {

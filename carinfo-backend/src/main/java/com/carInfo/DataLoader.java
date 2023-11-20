@@ -25,15 +25,18 @@ public class DataLoader implements CommandLineRunner {
     }
 
     private void loadMockData() {
-        // Create mock data
         List<Car> cars = Arrays.asList(
-                new Car("Car1", "Model1", "Make1", 2020),
-                new Car("Car2", "Model2", "Make2", 2021),
-                new Car("Car3", "Model3", "Make3", 2019)
-                // Add more mock data as needed
+            new Car("Tesla Model S", "Model S", "Tesla", 2022),
+            new Car("Ford Mustang", "Mustang", "Ford", 2023),
+            new Car("BMW 3 Series", "3 Series", "BMW", 2021),
+            new Car("Toyota Camry", "Camry", "Toyota", 2022),
+            new Car("Honda Civic", "Civic", "Honda", 2023),
+            new Car("Audi A4", "A4", "Audi", 2022),
+            new Car("Mercedes-Benz E-Class", "E-Class", "Mercedes-Benz", 2023),
+            new Car("Chevrolet Corvette", "Corvette", "Chevrolet", 2022),
+            new Car("Nissan Altima", "Altima", "Nissan", 2023),
+            new Car("Lamborghini Huracan", "Huracan", "Lamborghini", 2021)
         );
-
-        // Save mock data to the database
         carRepository.saveAll(cars);
     }
 }
