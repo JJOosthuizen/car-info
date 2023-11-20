@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+/* CARD STYLING FOR CarList */
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+}
+
