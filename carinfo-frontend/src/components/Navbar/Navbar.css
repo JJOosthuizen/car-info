@@ -1,0 +1,43 @@
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  nav h1 {
+    margin: 0;
+    font-size: 24px;
+    color: white;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li {
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  nav.scrolled {
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+  }
+  
+  nav.scrolled h1 {
+    color: #3498db;
+  }
+  
+  nav.scrolled ul li {
+    color: #3498db;
+  }
+  

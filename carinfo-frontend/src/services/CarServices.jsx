@@ -13,6 +13,15 @@ const CarService = {
     }
   },
 
+  getAllMakes: async () => {
+    try {
+      const response = await axios.get(`${API_URL}/getAllMakes`);
+      return response.data;
+    } catch (error) {
+      throw new Error('Error fetching all car makes:', error);
+    }
+  },
+
   getCarByName: async (name) => {
     try {
       const response = await axios.get(`${API_URL}/getCar/${name}`);
