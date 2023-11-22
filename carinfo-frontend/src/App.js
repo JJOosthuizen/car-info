@@ -1,6 +1,7 @@
 import './App.css';
 import CarList from './components/CarList';
 import Navbar from './components/Navbar/Navbar';
+import Pages from './pages/Pages';
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
         <h1>Welcome to the Car Showroom</h1>
       </header>
       <main>
-        <CarList />
+        <Pages />
+        {/* <CarList /> */}
       </main>
     </div>
   );
