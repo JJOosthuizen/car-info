@@ -4,7 +4,7 @@ import CarService from '../services/CarServices';
 import CarCard from '../components/CarCard';
 
 function Searched() {
-  const [searchedCar, setSearchedCar] = useState([]);
+  const [searchedCar, setSearchedCar] = useState(null);
   let params = useParams();
 
   useEffect(() => {
@@ -24,7 +24,7 @@ function Searched() {
 
   return (
     <div>
-      <CarCard key={searchedCar.id} car={searchedCar[0]} />
+      {searchedCar && <CarCard key={searchedCar.id} car={searchedCar} />}
     </div>
   )
 }
