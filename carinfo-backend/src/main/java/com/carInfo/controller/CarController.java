@@ -35,7 +35,7 @@ public class CarController {
     }
 
     @GetMapping("/getCar/{name}")
-    public List<Car> getCarByName(@PathVariable String name){
+    public Car getCarByName(@PathVariable String name){
         return carRepository.findByName(name);
     }
 
