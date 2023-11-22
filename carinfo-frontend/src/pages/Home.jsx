@@ -4,7 +4,7 @@ import Search from '../components/search/Search'
 function Home() {
   return (
     <div>
-        <Search />
+        This is HOME
     </div>
   )
 }
