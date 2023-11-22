@@ -8,17 +8,20 @@ import { BrowserRouter } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Navbar />
-        <h1>Welcome to the Car Showroom</h1>
-      </header>
-      <main>
-        <BrowserRouter>
+      <BrowserRouter>
+        <header className="App-header">
+
+          <Navbar />
+          <h1>Welcome to the Car Showroom</h1>
+        </header>
+        <main>
+
           <Search />
           <Pages />
           {/* <CarList /> */}
-        </BrowserRouter>
-      </main>
+        </main>
+      </BrowserRouter>
+
     </div>
   );
 }
