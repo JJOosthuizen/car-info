@@ -22,6 +22,12 @@ const CarList = () => {
 
   const loadMore = () => {
     setVisibleCars((prevVisibleCars) => prevVisibleCars + carsPerPage);
+    setTimeout(() => {
+      window.scroll({
+        top: window.scrollY + 450,
+        behavior: 'smooth'
+      });
+    }, 100);
   };
 
   const visibleCarList = cars.slice(0, visibleCars);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const CarCard = ({ car }) => {
   return (
@@ -7,7 +7,9 @@ const CarCard = ({ car }) => {
       <p>Model: {car.model}</p>
       <p>Make: {car.make}</p>
       <p>Year: {car.carYear}</p>
-      {/* Add image here when available in the API */}
+      <div className="image-container">
+        <img src={car.imageUrl} alt={car.name} />
+      </div>
     </div>
   );
 };
