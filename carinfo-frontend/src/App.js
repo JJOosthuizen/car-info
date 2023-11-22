@@ -1,6 +1,6 @@
 import './App.css';
 import CarList from './components/CarList';
-import Navbar from './components/Navbar/Navbar';
+import Navbar from './components/navbar/Navbar';
 import Pages from './pages/Pages';
 
 function App() {

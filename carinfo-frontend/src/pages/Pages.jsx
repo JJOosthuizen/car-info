@@ -10,9 +10,7 @@ function Pages() {
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/allCars' element={<CarList />} />
-                {/* <Route path="blogs" element={<Blogs />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<NoPage />} /> */}
+                {/* <Route path='/carByName/:search' element={<} */}
             </Routes>
         </BrowserRouter>
     )
