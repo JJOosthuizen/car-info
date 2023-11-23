@@ -18,17 +18,19 @@ public class Car {
     private String make;
     private int carYear;
     private String imageUrl;
+    private String carMakeImageUrl;
 
     public Car() {
 
     }
 
-    public Car(String name, String model, String make, int year, String imageUrl) {
+    public Car(String name, String model, String make, int year, String imageUrl, String carMakeImageUrl) {
         this.name = name;
         this.model = model;
         this.make = make;
         this.carYear = year;
         this.imageUrl = imageUrl;
+        this.carMakeImageUrl = carMakeImageUrl;
     }
 
     // Getters and Setters
@@ -80,6 +82,15 @@ public class Car {
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
+
+    public String getCarMakeImageUrl() {
+        return carMakeImageUrl;
+    }
+
+    public void setCarMakeImageUrl(String carMakeImageUrl) {
+        this.carMakeImageUrl = carMakeImageUrl;
+    }
+
     @Override
     public String toString() {
         return "Car{" +
@@ -90,6 +101,5 @@ public class Car {
                 ", year=" + carYear +
                 '}';
     }
-
 
 }

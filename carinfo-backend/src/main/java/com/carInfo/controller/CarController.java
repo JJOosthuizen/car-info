@@ -2,6 +2,7 @@ package com.carInfo.controller;
 
 import com.carInfo.dao.CarRepository;
 import com.carInfo.model.Car;
+import com.carInfo.model.dto.CarMakeDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,11 +27,13 @@ public class CarController {
     }
 
     @GetMapping("/getAllMakes")
-    public List<String> getAllMakes() {
+    public List<CarMakeDTO> getAllMakes() {
         List<Car> cars = carRepository.findAll();
+
         return cars.stream()
-                .map(Car::getMake)
-                .distinct()
+                .collect(Collectors.groupingBy(Car::getMake, Collectors.mapping(Car::getCarMakeImageUrl, Collectors.toList())))
+                .entrySet().stream()
+                .map(entry -> new CarMakeDTO(entry.getKey(), entry.getValue().get(0))) // Assuming one image URL per make
                 .collect(Collectors.toList());
     }
 

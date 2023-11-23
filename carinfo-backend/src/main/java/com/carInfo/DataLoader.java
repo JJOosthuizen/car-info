@@ -26,16 +26,16 @@ public class DataLoader implements CommandLineRunner {
 
     private void loadMockData() {
         List<Car> cars = Arrays.asList(
-            new Car("Tesla Model S", "Model S", "Tesla", 2022, "http://localhost:8080/images/tesla-model-s-2022.png"),
-            new Car("Ford Mustang", "Mustang", "Ford", 2023,"http://localhost:8080/images/ford-mustang-2023.png"),
-            new Car("BMW F30 3 Series Sedan", "F30 3 Series", "BMW", 2012,"http://localhost:8080/images/BMW-F30-3-Series-Sedan-2012.jpg"),
-            new Car("Toyota Camry", "Camry", "Toyota", 2021, "http://localhost:8080/images/toyota-camry-2021.png"),
-            new Car("Honda Civic", "Civic", "Honda", 2023, ""),
-            new Car("Audi A4", "A4", "Audi", 2022, ""),
-            new Car("Mercedes-Benz E-Class", "E-Class", "Mercedes-Benz", 2023, ""),
-            new Car("Chevrolet Corvette", "Corvette", "Chevrolet", 2022, ""),
-            new Car("Nissan Altima", "Altima", "Nissan", 2023, ""),
-            new Car("Lamborghini Huracan", "Huracan", "Lamborghini", 2021, "http://localhost:8080/images/lamborghini-huracan-2021.png")
+            new Car("Tesla Model S", "Model S", "Tesla", 2022, "http://localhost:8080/images/tesla-model-s-2022.png", "http://localhost:8080/images/makes/tesla.jpg"),
+            new Car("Ford Mustang", "Mustang", "Ford", 2023,"http://localhost:8080/images/ford-mustang-2023.png", ""),
+            new Car("BMW F30 3 Series Sedan", "F30 3 Series", "BMW", 2012,"http://localhost:8080/images/BMW-F30-3-Series-Sedan-2012.jpg", "http://localhost:8080/images/makes/bmw.jpg"),
+            new Car("Toyota Camry", "Camry", "Toyota", 2021, "http://localhost:8080/images/toyota-camry-2021.png", "http://localhost:8080/images/makes/toyota.jpg"),
+            new Car("Honda Civic", "Civic", "Honda", 2023, "", ""),
+            new Car("Audi A4", "A4", "Audi", 2022, "", ""),
+            new Car("Mercedes-Benz E-Class", "E-Class", "Mercedes-Benz", 2023, "", ""),
+            new Car("Chevrolet Corvette", "Corvette", "Chevrolet", 2022, "", ""),
+            new Car("Nissan Altima", "Altima", "Nissan", 2023, "", ""),
+            new Car("Lamborghini Huracan", "Huracan", "Lamborghini", 2021, "http://localhost:8080/images/lamborghini-huracan-2021.png", "http://localhost:8080/images/makes/lamborghini.png")
         );
         carRepository.saveAll(cars);
     }
