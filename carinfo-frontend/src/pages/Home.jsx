@@ -1,11 +1,11 @@
 import React from 'react'
-import Model from '../components/carModels/Model'
+import Make from '../components/carMakes/Make'
 
 function Home() {
   return (
     <div>
-        HOME
-        <Model />
+      HOME
+      {/* <Make /> */}
     </div>
   )
 }
