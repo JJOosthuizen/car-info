@@ -27,8 +27,6 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: Navigate to carinfo-backend directory
-      run: cd carinfo-backend
     - name: Build with Maven
       run: mvn -B package --file carinfo-backend/pom.xml
 
